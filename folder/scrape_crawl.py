@@ -100,7 +100,7 @@ class Crawler:
         self.sites_visited = []
 
     def site_append(self, link):
-        if not link in self.sites_to_visit and not link in self.sites_visited:
+        if not link in self.sites_to_visit and not link in self.sites_visited and len(self.sites_to_visit) < 5:
             self.sites_to_visit.append(link)
 
     def site_read(self):
